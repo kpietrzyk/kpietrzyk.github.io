@@ -6,19 +6,20 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  font-family: helvetica, arial, sans, monospace;
+  font-family: 'Open Sans', arial, sans, monospace;
   min-height: 100vh;
 }
 .content-container {
   display: flex;
   /*flex-grow: 1;*/
   /*flex-shrink: 1;*/
-  /*flex-basis: auto;*/Code Editor (Ace)
-  flex: 1 1 auto;
+  /*flex-basis: auto;*/
   padding-top: 10vh;
   width: 100%;
 }
-
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', helvetica, sans;
+}
 h1 {
   font-size: 5vw;
   margin-top: 0;
@@ -377,15 +378,15 @@ h2 ~p {
   color: #fff;
   display: inline-block;
   font-family: helvetica, arial, sans;
-  font-size: 1em;
+  font-size: 1.7em;
   font-weight: bold;
-  height: 2.5em;
+  height: 1.5em;
   line-height: 1;
-  padding-top: 0.85em;
+  padding-top: 0.27em;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
-  width: 2.5em;
+  width: 1.5em;
 }
 
 .social-link:active,
@@ -674,6 +675,7 @@ h2 ~p {
   }
   .header-nav li ~ li {
     border: 0;
+    padding: 0;
   }
   .header-nav li:last-child {
     margin-bottom: 1em;
