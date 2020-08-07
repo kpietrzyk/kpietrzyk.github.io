@@ -6,9 +6,15 @@ function activateGallery() {
   let mainImage  = document.querySelector("#gallery-photo img");
   
   thumbnails.forEach(function(thumbnail){
+    
+    //Preload large images.
+    let newImageSrc = thumbnail.dataset.largeVersion;
+    let largVersion = new Image();
+    largVersion.src = newImageSrc;
+    
     thumbnail.addEventListener("click", function() {
       // Set clicked image as main image
-      let newImageSrc = thumbnail.dataset.largeVersion;
+      
       let currentClass = "current";
       
       mainImage.setAttribute("src", newImageSrc);
@@ -25,6 +31,8 @@ function activateGallery() {
       
       title.innerHTML = thumbnail.dataset.title;
       description.innerHTML = thumbnail.dataset.description;
+      
+      
       
     });
   });
